@@ -17,7 +17,7 @@ module.exports.config = {
 module.exports.run = async function ({ api, event, args }) {
     const question = args.join(' ');
     
-    if (!question) return api.sendMessage("Please provide a question first.", event.threadID, event.messageID);
+    if (!question) return api.sendMessage("putangina lagyan mo naman question bobo mo.", event.threadID, event.messageID);
 
     try {
         api.sendMessage("Please bear with me while I ponder your request...", event.threadID, event.messageID);
@@ -32,9 +32,9 @@ module.exports.run = async function ({ api, event, args }) {
         const timeString = moment.tz('Asia/Manila').format('LLLL');
 
         api.sendMessage({
-            body: `𝙍𝙀𝙎𝙋𝙊𝙉𝘿 𝘼𝙄 🤖\n━━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${question}\n━━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\nThis bot was created by Joshua Apostol\n
+            body: `𝙍𝙀𝙎𝙋𝙊𝙉𝘿 𝘼𝙄 🤖\n━━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${question}\n━━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\nThis bot was created by Warren Hervas\n
 𝗣⃪𝗼⃪𝗴⃪𝗶⃪:
-${timeString}\n\nFOLLOW THE DEVELOPER: https://www.facebook.com/profile.php?id=100088690249020\n\nMAKE YOUR OWN BOT HERE: https://autobot-4af1.onrender.com/.`
+${timeString}\n\nFOLLOW THE DEVELOPER: https://www.facebook.com/profile.php?id=61550188503841\n\nMAKE YOUR OWN BOT HERE: https://warren-autobot.onrender.com.`
         }, event.threadID, (error, info) => {
             if (error) {
                 console.error(error);
