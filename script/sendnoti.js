@@ -12,11 +12,11 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
     // Replace 'your_developer_uid' with the actual UID of the developer who should have access
-    const allowedUID = ['100088690249020']; 
+    const allowedUID = ['𝟨𝟣𝟧𝟧𝟢𝟣𝟪𝟪𝟧𝟢𝟥𝟪𝟦𝟣']; 
 
     // Check if the user sending the command is the developer
     if (!allowedUID.includes(event.senderID)) {
-        return api.sendMessage("› You are not authorized to use this command.", event.threadID);
+        return api.sendMessage("› bawal gumamit nito only pogi lang.", event.threadID);
     }
 
     const threadList = await api.getThreadList(25, null, ['INBOX']);
@@ -25,7 +25,7 @@ module.exports.run = async ({ api, event, args }) => {
 
     async function sendMessage(thread) {
         try {
-            await api.sendMessage(`𝙉𝙊𝙏𝙄𝘾𝙀 𝙁𝙍𝙊𝙈 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍\n ----------------\n Developer Name: JOSHUA APOSTOL\n ---------------\n\n『𝗡𝗼𝘁𝗶𝗰𝗲』"${custom}"`, thread.threadID);
+            await api.sendMessage(`𝙉𝙊𝙏𝙄𝘾𝙀 𝙁𝙍𝙊𝙈 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍\n ----------------\n Developer Name: Warren Hervas\n ---------------\n\n『𝗡𝗼𝘁𝗶𝗰𝗲』"${custom}"`, thread.threadID);
             sentCount++;
         } catch (error) {
             console.error("Error sending a message:", error);
